@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+*{
+    font-family: 'Karla', sans-serif;
+}
+
+html{
+    display: flex;
+    justify-content: center;
+    background-color: #e6e9e9;
+    width: 1440px;
+    padding: 5%;
+}
+
+body{
+    width: 850px;
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.06);
+    background-color: white;
+    border-radius: 10px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas:
+     'Heading Heading Heading Heading'  
+     'subscription subscription Why Why';
+    grid-auto-columns: 1fr;
+}
+
+/****  Heading section ****/
+
+.grid-heading{
+    grid-area: Heading;
+    padding: 5%;
+    padding-left: 6%;
+    padding-bottom: 2%;
+    border-top-right-radius:10px;
+    border-top-left-radius: 10px;
+}
+
+.grid-heading> h1{
+    color: #2AB3B1;
+    padding-bottom: 1%;
+}
+
+.grid-heading> h2{
+    padding-bottom: 8px;
+    color: #C0DF33;
+}
+
+.grid-heading> h3{
+    color:  #9AA7BE;
+    padding-bottom: 3%;
+    line-height: 35px;
+}
+
+/****Subscription section****/
+
+.grid-item1{
+    grid-area: subscription;
+    padding-top: 7%;
+    padding-left: 12%;
+    padding-bottom: 10%;
+    background-color: #2AB3B1;
+    border-bottom-left-radius: 10px;
+    color: whitesmoke;
+}
+
+.grid-item1> h1{
+    font-size: 40px;
+    word-spacing: 4px;
+    padding-bottom: 10px;
+}
+
+.grid-item1>h2{
+    font-size: 1.50em;
+}
+
+.grid-item1>h3{
+margin-top: -25px;
+opacity: 85%;
+padding-bottom: 3%;
+}
+
+button{
+    width: 280px;
+    height: 55px;
+    border-radius:6px ;
+    background-color:hsl(71, 73%, 54%); 
+    color: whitesmoke;
+    font-size: 15px;
+    border: none;
+    box-shadow:  0px 7px 12px #666666;
+}
+
+button:hover{
+    cursor: pointer;
+    opacity: 50%;
+}
+
+/**** why us section ****/
+
+.grid-item2{
+    grid-area: Why;
+    padding: 6%;
+    padding-left: 12%;
+    border-bottom-right-radius: 10px;
+    background-color: #4EBFB4 ;
+    color: whitesmoke;
+}
+
+li{
+    padding: 3px;
+    margin-left: -14%;
+    opacity: 60%;
+}
+
+
+/**** Mobile Design ****/
+
+@media only screen and (max-width: 375px) {
+
+html{
+    max-width: 100vh;
+    padding: 0;
+}
+
+body{
+    width: 75vh;
+}
+
+.grid-container{
+        display: grid;
+        grid-template-areas: 
+        'Heading'
+        'subscription'
+        'Why';
+}
+
+.grid-heading{
+        grid-area: Heading;
+        display: flex;
+        overflow-wrap: break-word;
+        flex-direction: column;
+        padding-left: 8%;
+        font-size: 16px;
+}
+
+.grid-item1{
+        display: flex;
+        flex-direction: column;
+        grid-area:subscription ;
+        border-radius: 0px;
+        padding-top: 2%;
+        padding-left: 8%;
+}
+
+.grid-item1> h2{
+    margin-bottom: 0%;
+}
+
+button{
+        width: 300px;
+}
+
+.grid-item2{
+        display: flex;
+        flex-direction: column;
+        grid-area: Why;
+        padding-left: 10%;
+}
+
+}
